@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UILabel*label = [[UILabel alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    label.text = @"12345";
+    label.font = GetFont(30.0);
+    [self.view addSubview:label];
+    
+    UserDefaultsSetObject(@"111", @"key");
+    SWLog(@"1234 -%@",UserDefaultsObjectForKey(@"key"));
 }
 
 

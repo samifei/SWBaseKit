@@ -9,6 +9,24 @@
 #ifndef SW_PrefixHeader_pch
 #define SW_PrefixHeader_pch
 
+/*
+ * cocoapods 引入
+ */
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <AFNetworking.h>
+#import <MJRefresh.h>
+#import <MJExtension.h>
+#import <Masonry.h>
+#import <MBProgressHUD.h>
+
+/*
+ * 项目工程 引入
+ */
+#import "DefineMacro.h"
+
+
+
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

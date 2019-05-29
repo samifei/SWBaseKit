@@ -57,6 +57,8 @@
 		2C153A59229E6ECF006D1432 /* SWBaseKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWBaseKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C153A5D229E6ECF006D1432 /* SWBaseKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWBaseKitUITests.m; sourceTree = "<group>"; };
 		2C153A5F229E6ECF006D1432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C153A6F229E7163006D1432 /* SW-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SW-PrefixHeader.pch"; sourceTree = "<group>"; };
+		2C153A72229E80A2006D1432 /* DefineMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineMacro.h; sourceTree = "<group>"; };
 		3B612440DBB815DC117C4F64 /* libPods-SWBaseKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWBaseKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75AF91179FEE39B4CF05D016 /* Pods-SWBaseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWBaseKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWBaseKit/Pods-SWBaseKit.debug.xcconfig"; sourceTree = "<group>"; };
 		8608779A98A9BBB8E77E7370 /* Pods-SWBaseKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWBaseKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWBaseKitUITests/Pods-SWBaseKitUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,11 +124,10 @@
 				2C153A3A229E6ECE006D1432 /* AppDelegate.m */,
 				2C153A3C229E6ECE006D1432 /* ViewController.h */,
 				2C153A3D229E6ECE006D1432 /* ViewController.m */,
-				2C153A3F229E6ECE006D1432 /* Main.storyboard */,
-				2C153A42229E6ECF006D1432 /* Assets.xcassets */,
-				2C153A44229E6ECF006D1432 /* LaunchScreen.storyboard */,
-				2C153A47229E6ECF006D1432 /* Info.plist */,
-				2C153A48229E6ECF006D1432 /* main.m */,
+				2C153A6D229E710B006D1432 /* Global */,
+				2C153A6C229E710B006D1432 /* Main */,
+				2C153A6E229E710B006D1432 /* Resources */,
+				2C153A6B229E710B006D1432 /* Supporting Files */,
 			);
 			path = SWBaseKit;
 			sourceTree = "<group>";
@@ -147,6 +148,49 @@
 				2C153A5F229E6ECF006D1432 /* Info.plist */,
 			);
 			path = SWBaseKitUITests;
+			sourceTree = "<group>";
+		};
+		2C153A6B229E710B006D1432 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C153A3F229E6ECE006D1432 /* Main.storyboard */,
+				2C153A44229E6ECF006D1432 /* LaunchScreen.storyboard */,
+				2C153A6F229E7163006D1432 /* SW-PrefixHeader.pch */,
+				2C153A47229E6ECF006D1432 /* Info.plist */,
+				2C153A42229E6ECF006D1432 /* Assets.xcassets */,
+				2C153A48229E6ECF006D1432 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C153A6C229E710B006D1432 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2C153A6D229E710B006D1432 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				2C153A71229E808B006D1432 /* Define */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		2C153A6E229E710B006D1432 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2C153A71229E808B006D1432 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				2C153A72229E80A2006D1432 /* DefineMacro.h */,
+			);
+			path = Define;
 			sourceTree = "<group>";
 		};
 		EAD08E6C404F68CB61C605A0 /* Pods */ = {
@@ -557,7 +601,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR2FXTKS66;
-				INFOPLIST_FILE = SWBaseKit/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SWBaseKit/Supporting Files/SW-PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SWBaseKit/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -576,7 +622,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR2FXTKS66;
-				INFOPLIST_FILE = SWBaseKit/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SWBaseKit/Supporting Files/SW-PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SWBaseKit/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
