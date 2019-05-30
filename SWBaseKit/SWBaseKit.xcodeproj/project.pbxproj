@@ -15,6 +15,7 @@
 		2C153A49229E6ECF006D1432 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C153A48229E6ECF006D1432 /* main.m */; };
 		2C153A53229E6ECF006D1432 /* SWBaseKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C153A52229E6ECF006D1432 /* SWBaseKitTests.m */; };
 		2C153A5E229E6ECF006D1432 /* SWBaseKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C153A5D229E6ECF006D1432 /* SWBaseKitUITests.m */; };
+		2C153A76229F66F4006D1432 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C153A75229F66F4006D1432 /* HttpManager.m */; };
 		529A1DC0794C79D02D2E95B2 /* libPods-SWBaseKitUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1176048182140FD008B5E4D8 /* libPods-SWBaseKitUITests.a */; };
 		55271D636E322E03744F0416 /* libPods-SWBaseKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B612440DBB815DC117C4F64 /* libPods-SWBaseKitTests.a */; };
 		E2D1227BDBDE49CA207E67DA /* libPods-SWBaseKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE01F21093A776DEFFAD128 /* libPods-SWBaseKit.a */; };
@@ -59,6 +60,8 @@
 		2C153A5F229E6ECF006D1432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C153A6F229E7163006D1432 /* SW-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SW-PrefixHeader.pch"; sourceTree = "<group>"; };
 		2C153A72229E80A2006D1432 /* DefineMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineMacro.h; sourceTree = "<group>"; };
+		2C153A74229F66F4006D1432 /* HttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
+		2C153A75229F66F4006D1432 /* HttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
 		3B612440DBB815DC117C4F64 /* libPods-SWBaseKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWBaseKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75AF91179FEE39B4CF05D016 /* Pods-SWBaseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWBaseKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWBaseKit/Pods-SWBaseKit.debug.xcconfig"; sourceTree = "<group>"; };
 		8608779A98A9BBB8E77E7370 /* Pods-SWBaseKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWBaseKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWBaseKitUITests/Pods-SWBaseKitUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +176,7 @@
 		2C153A6D229E710B006D1432 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				2C153A73229F66F4006D1432 /* NetWork */,
 				2C153A71229E808B006D1432 /* Define */,
 			);
 			path = Global;
@@ -191,6 +195,15 @@
 				2C153A72229E80A2006D1432 /* DefineMacro.h */,
 			);
 			path = Define;
+			sourceTree = "<group>";
+		};
+		2C153A73229F66F4006D1432 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				2C153A74229F66F4006D1432 /* HttpManager.h */,
+				2C153A75229F66F4006D1432 /* HttpManager.m */,
+			);
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 		EAD08E6C404F68CB61C605A0 /* Pods */ = {
@@ -428,6 +441,7 @@
 				2C153A3E229E6ECE006D1432 /* ViewController.m in Sources */,
 				2C153A49229E6ECF006D1432 /* main.m in Sources */,
 				2C153A3B229E6ECE006D1432 /* AppDelegate.m in Sources */,
+				2C153A76229F66F4006D1432 /* HttpManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,9 +20,9 @@
  * 详情：https://www.jianshu.com/p/d7b8f831c1f1
  */
 #define StatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height //状态栏高度
-#define NavBarHeight 44.0 //导航条高度
-#define TabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49) //底部tabbar高度
-#define TopHeight (StatusBarHeight + NavBarHeight) //整个导航栏高度
+#define NavBarHeight    44.0 //导航条高度
+#define TabBarHeight    ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49) //底部tabbar高度
+#define TopHeight       (StatusBarHeight + NavBarHeight) //整个导航栏高度
 
 /*
  * 设置颜色
@@ -33,12 +33,12 @@
 /*
  * 常用代码
  */
-#define APPDELEGATE     (AppDelegate *)[[UIApplication sharedApplication] delegate]//Appdelegate
-#define IOS_VERSION     [[[UIDevice currentDevice] systemVersion] floatValue]//设备的iOS版本
-#define WeakSelf(type)  __weak typeof(type) weak##type = type;//弱引用
+#define APPDELEGATE         (AppDelegate *)[[UIApplication sharedApplication] delegate]//Appdelegate
+#define IOS_VERSION         [[[UIDevice currentDevice] systemVersion] floatValue]//设备的iOS版本
+#define WeakSelf(type)      __weak typeof(type) weak##type = type;//弱引用
 #define NotificationCenter  [NSNotificationCenter defaultCenter] //通知中心
 #define GetImage(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]] //设置图片
-#define GetFont(fontSize)  [UIFont systemFontOfSize:fontSize]// 设置字号大小
+#define GetFont(fontSize)   [UIFont systemFontOfSize:fontSize]// 设置字号大小
 //NSUserDefaults
 #define UserDefaultsSetBool(value,key)    [[NSUserDefaults standardUserDefaults] setBool:value forKey:key]
 #define UserDefaultsBoolForKey(key)       [[NSUserDefaults standardUserDefaults] boolForKey:key]

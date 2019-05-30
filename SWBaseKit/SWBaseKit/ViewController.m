@@ -23,7 +23,8 @@
     [self.view addSubview:label];
     
     UserDefaultsSetObject(@"111", @"key");
-    SWLog(@"1234 -%@",UserDefaultsObjectForKey(@"key"));
+    SWLog(@"1234 = %@",UserDefaultsObjectForKey(@"key"));
+    
 }
 
 
