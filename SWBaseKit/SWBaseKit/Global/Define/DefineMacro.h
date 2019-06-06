@@ -33,7 +33,7 @@
 /*
  * 常用代码
  */
-#define APPDELEGATE         (AppDelegate *)[[UIApplication sharedApplication] delegate]//Appdelegate
+#define APPDELEGATE         ((AppDelegate *)[[UIApplication sharedApplication] delegate])//Appdelegate
 #define IOS_VERSION         [[[UIDevice currentDevice] systemVersion] floatValue]//设备的iOS版本
 #define WeakSelf(type)      __weak typeof(type) weak##type = type;//弱引用
 #define NotificationCenter  [NSNotificationCenter defaultCenter] //通知中心

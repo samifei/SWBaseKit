@@ -22,21 +22,18 @@
     manager.requestSerializer.timeoutInterval = RequestTimeOut;
     return manager;
 }
+
 + (void)postUrl:(NSString *)urlStr
      Parameters:(id)parameters
         success:(void (^)(NSDictionary *resDict))success
         failure:(void (^)(NSError *error))failure;
 {
-    
-    //    if ([[AFNetworkReachabilityManager sharedManager] networkReachabilityStatus] <= 0) {
-    //        [MBProgressHUD showMessageInWindow:@"网络无连接" afterDelayHide:AfterDelayHide];
-    //        return;
-    //    }
+    [self networkNotOK];
     AFHTTPSessionManager *manager = [self httpManager];
-    //开始请求
     [manager POST:urlStr
        parameters:parameters
          progress:^(NSProgress * _Nonnull uploadProgress) {
+             
          }
           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
               
@@ -58,6 +55,7 @@
        success:(void (^)(id))success
        failure:(void (^)(NSError *error))failure
 {
+    [self networkNotOK];
     AFHTTPSessionManager *manager = [self httpManager];
     //开始请求
     [manager  GET:urlStr
@@ -66,11 +64,10 @@
              
          }
           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-              //              NSString *result = [[NSString alloc] initWithData:responseObject
-              //                                                       encoding:NSUTF8StringEncoding];
-              //              DDLogInfo(@"返回数据--%@",result);
+              NSString *result = [[NSString alloc] initWithData:responseObject
+                                                       encoding:NSUTF8StringEncoding];
+//              DDLogInfo(@"返回数据--%@",result);
               NSMutableDictionary *resDict = (NSMutableDictionary *)[responseObject mj_JSONObject];
-//              NSDictionary *dict = [HttpManager checkResultVaild:resDict withFunction:parameters[@"function"]];
               success(resDict);
           }
           failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -78,7 +75,6 @@
               NSLog(@"%@",error);
           }];
 }
-
 
 /**
  *  检查返回的内容是否有效
@@ -92,5 +88,34 @@
 //{
 //    
 //}
+
+/**
+ * 检查网络是否正常
+ *
+ **/
++(void)networkNotOK {
+    if ([[AFNetworkReachabilityManager sharedManager] networkReachabilityStatus] <= 0) {
+        
+        // Set the label text.
+        self.hud.label.text = NSLocalizedString(@"网络无连接", @"HUD loading title");
+        // You can also adjust other label properties if needed.
+        // hud.label.font = [UIFont italicSystemFontOfSize:16.f];
+        
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+            sleep(3.);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self->hud hideAnimated:YES];
+            });
+        });
+        return;
+    }
+}
+-(MBProgressHUD *)hud {
+    if (_hud ==nil) {
+        _hud = [[MBProgressHUD alloc]initWithView:((AppDelegate*)([UIApplication sharedApplication].delegate)).window];
+    }
+    return _hud;
+}
+
 
 @end

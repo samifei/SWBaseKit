@@ -24,6 +24,19 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+    <key>NSCameraUsageDescription</key>
+    <string>此项功能需要允许相机拍照，以用作头像(如果使用了此特性，请修改此描述，什么功能用来干嘛)</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>此功能需要使用你的面容信息，以验证你的身份(如果使用了此特性，请修改此描述，什么功能用来干嘛)</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>允许访问你的位置信息，以显示你的当前位置(如果使用了此特性，请修改此描述，什么功能用来干嘛)</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>此项功能需要允许访问照片图库，以用作头像(如果使用了此特性，请修改此描述，什么功能用来干嘛)</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

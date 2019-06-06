@@ -22,8 +22,9 @@
 /*
  * 项目工程 引入
  */
+#import "AppDelegate.h"
 #import "DefineMacro.h"
-
+#import "HttpManager.h"
 
 
 

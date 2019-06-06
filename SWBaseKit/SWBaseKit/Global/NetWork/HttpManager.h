@@ -11,6 +11,9 @@
 #define RequestTimeOut 30
 
 @interface HttpManager : NSObject
+
+@property (copy, nonatomic) MBProgressHUD *hud;
+
 /**
  *  POST网络请求
  *  @param urlStr      url
