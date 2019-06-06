@@ -12,7 +12,7 @@
 
 @interface HttpManager : NSObject
 
-@property (copy, nonatomic) MBProgressHUD *hud;
+@property (strong, nonatomic) MBProgressHUD *hud;
 
 /**
  *  POST网络请求

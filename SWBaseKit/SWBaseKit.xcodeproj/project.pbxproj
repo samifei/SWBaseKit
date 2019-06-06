@@ -614,7 +614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NR2FXTKS66;
+				DEVELOPMENT_TEAM = 93A42BC8M3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SWBaseKit/Supporting Files/SW-PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/SWBaseKit/Supporting Files/Info.plist";
@@ -635,7 +635,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NR2FXTKS66;
+				DEVELOPMENT_TEAM = 93A42BC8M3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SWBaseKit/Supporting Files/SW-PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/SWBaseKit/Supporting Files/Info.plist";
