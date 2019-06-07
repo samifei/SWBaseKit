@@ -25,7 +25,7 @@
     UserDefaultsSetObject(@"111", @"key");
     SWLog(@"1234 = %@",UserDefaultsObjectForKey(@"key"));
     
-    [self testAction];
+    [self testAction];//test
 }
 -(void)testAction {
     NSString * url = [NSString stringWithFormat:@"http://apps.ttxc.net:8000/api/year/list"];
