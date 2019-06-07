@@ -14,6 +14,7 @@ target 'SWBaseKit' do
   pod 'MJExtension' #字典转模型
   pod 'MBProgressHUD'
   pod 'SDWebImage'
+  pod 'YYKit'
 
   target 'SWBaseKitTests' do
     inherit! :search_paths
